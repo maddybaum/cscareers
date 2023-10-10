@@ -4,7 +4,7 @@
     <pattern>hi</pattern>
     <template>
         <delay>2</delay>
-        Hello, welcome! I would love to help you figure out the best career for you</template>
+        Hello, welcome! I would love to help you figure out the best career for you. (Type ok...)</template>
 </category>
     <category>
         <pattern>ok</pattern>
