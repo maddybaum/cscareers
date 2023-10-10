@@ -25,4 +25,20 @@
 	    <template>Based on your interests, being a cybersecurity analyst seems like a good fit.
 	    You will get to contribute to a team, spend a lot of time coding. </template>
 	</category>
+		<category>
+	    <pattern>QualityAnalyst</pattern>
+	    <template>Based on your interests, you might enjoy being a quality analyst! You would be able to 
+	    independently contribute through writing tests, while also working with business to better understand
+	    system needs.</template>
+	</category>
+		<category>
+	    <pattern>ScrumMaster</pattern>
+	    <template>Based on your interests, you might enjoy being a scrum master! You would be able to lead your team
+	    and help analyze current and future projects.</template>
+	</category>
+		<category>
+	    <pattern>DevOpsLead</pattern>
+	    <template>Based on your interests, you might enjoy being a DevOps Lead!You'll have the opportunity to lead teams
+	    and support large projects. </template>
+	</category>
 </aiml>

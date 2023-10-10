@@ -1,21 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-    <category>What career is best aligned with your interests?
-    <template>Let's take some time to find out! I will ask you a series of questions</template>
+    <category>
+    <pattern>hi</pattern>
+    <template>
+        <delay>2</delay>
+        Hello, welcome! I would love to help you figure out the best career for you</template>
+</category>
+    <category>
+        <pattern>ok</pattern>
+    <template><delay>2</delay>Let's take some time to find out! I will ask you a series of questions. Are you
+    ready to get started?
+    <button>
+        <text>Yes!</text>
+        <postback>Start</postback>
+    </button>
+    <button>
+        <text>Maybe later</text>
+        <postback>MaybeLater</postback>
+    </button></template>
     </category>
     
     <category>
-        <pattern>
-            Do you prefer working alone or on a team?
-        </pattern>
+        <pattern>MaybeLater</pattern>
+        <template>
+        <delay>1</delay>Great to meet you! Please come back when you have a chance to think about your career.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Start</pattern>
+          <template><delay>2</delay>Do you prefer working alone or on a team?
         <button>
             <text>Alone</text>
-            <postback>Alone</postback>
+            <postback>WorkingAlone</postback>
         </button>
         <button>
             <text>On a team</text>
             <postback>Team</postback>
         </button>
+        </template>
     </category>
     
     <category>
@@ -31,12 +54,13 @@
         </button>
         </template>
     </category>
+    
     <category>
         <pattern>Team</pattern>
         <template>
-            Would you rather be strictly coding? Or coding only part of the time?
+            Would you rather be strictly focused on engineering? Or only part of the time?
             <button>
-                <text>Strictly coding</text>
+                <text>Strictly engineering</text>
                 <postback>TeamStrictly</postback>
             </button>
             <button>
@@ -48,14 +72,14 @@
     
     <category>
         <pattern>AloneStrictly</pattern>
-        <template>Do you prefer leading a team or being an independent contributor?
+        <template>Would you prefer to focus on coding? Or combine IT and business?
         <button>
-            <text>Leading a team</text>
-            <postback>AloneStrictlyLeading</postback>
+            <text>Exclusively coding</text>
+            <postback>SoftwareEngineer</postback>
         </button>
         <button>
-            <text>Individual contributor</text>
-            <postback>AloneStrictlyContributor</postback>
+            <text>A mix of IT and business</text>
+            <postback>BusinessAnalyst</postback>
         </button>
         </template>
     </category>
@@ -65,7 +89,7 @@
         <template>Do you prefer leading a team or being an independent contributor?
         <button>
             <text>Leading a team</text>
-            <postback>BusinessAnalyst</postback>
+            <postback>LeadSoftwareEngineer</postback>
         </button>
         <button>
             <text>Independent contributor</text>
@@ -75,17 +99,53 @@
     </category>
     
     <category>
-        <pattern>TeamStrictly</pattern>
+        <pattern>TeamPartly</pattern>
         <template>
-            Do you prefer leading a team or being an indendependent contributor?
+            <delay>1</delay>
+            Do you prefer leading a team or being an independent contributor?
             <button>
                 <text>Leading a team</text>
-                <postback>LeadSoftwareEngineer</postback>
+                <postback>TeamPartlyLeading</postback>
             </button>
             <button>
                 <text>Independent contributor</text>
-                <postback>CybersecurityAnalyst</postback>
+                <postback>TeamPartlyContributor</postback>
             </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TeamStrictly</pattern>
+        <template>
+        <delay>1</delay>Do you prefer focusing on building final products or supporting testing?
+        <button>
+            <text>Building final products</text>
+            <postback>SoftwareEngineer</postback>
+        </button>
+        <button>
+            <text>Supporting Testing</text>
+            <postback>QualityAnalyst</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TeamPartlyLeading</pattern>
+        <template>
+        <delay>1</delay>
+        Which area would you prefer to focus on?
+        <button>
+        <text>Security</text>
+        <postback>CybersecurityAnalyst</postback>
+        </button>
+        <button>
+            <text>Automation</text>
+            <postback>QualityAnalyst</postback>
+        </button>
+        <button>
+            <text>Project Management</text>
+            <postback>ScrumMaster</postback>
+        </button>
         </template>
     </category>
     
