@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>HI*</pattern>
+    <template>
+        <delay>2</delay>
+        Hello, welcome! I would love to help you figure out the best career for you</template>
+</category><category>
+	<pattern>HI</pattern>
+	<that>HI</that>
+	<template>Greeting</template>
+</category>
+
+</aiml>

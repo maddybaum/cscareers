@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>What career is best aligned with your interests?
+    <template>Let's take some time to find out! I will ask you a series of questions</template>
+    </category>
+    
+    <category>
+        <pattern>
+            Do you prefer working alone or on a team?
+        </pattern>
+        <button>
+            <text>Alone</text>
+            <postback>Alone</postback>
+        </button>
+        <button>
+            <text>On a team</text>
+            <postback>Team</postback>
+        </button>
+    </category>
+    
+    <category>
+        <pattern>WorkingAlone</pattern>
+        <template>Would you rather be strictly coding? Or coding only a part of your job?
+        <button>
+            <text>Strictly coding</text>
+            <postback>AloneStrictly</postback>
+        </button>
+        <button>
+            <text>Partly coding</text>
+            <postback>AlonePartly</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>Team</pattern>
+        <template>
+            Would you rather be strictly coding? Or coding only part of the time?
+            <button>
+                <text>Strictly coding</text>
+                <postback>TeamStrictly</postback>
+            </button>
+            <button>
+                <text>Part of the time</text>
+                <postback>TeamPartly</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>AloneStrictly</pattern>
+        <template>Do you prefer leading a team or being an independent contributor?
+        <button>
+            <text>Leading a team</text>
+            <postback>AloneStrictlyLeading</postback>
+        </button>
+        <button>
+            <text>Individual contributor</text>
+            <postback>AloneStrictlyContributor</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>AlonePartly</pattern>
+        <template>Do you prefer leading a team or being an independent contributor?
+        <button>
+            <text>Leading a team</text>
+            <postback>BusinessAnalyst</postback>
+        </button>
+        <button>
+            <text>Independent contributor</text>
+            <postback>SoftwareEngineer</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>TeamStrictly</pattern>
+        <template>
+            Do you prefer leading a team or being an indendependent contributor?
+            <button>
+                <text>Leading a team</text>
+                <postback>LeadSoftwareEngineer</postback>
+            </button>
+            <button>
+                <text>Independent contributor</text>
+                <postback>CybersecurityAnalyst</postback>
+            </button>
+        </template>
+    </category>
+    
+</aiml>
